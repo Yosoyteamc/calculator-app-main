@@ -1,0 +1,230 @@
+@use "variables" as v;
+@use "sass:color";
+
+body{
+    background-color: v.$main-bg-3;
+}
+
+.calculator-container{
+    font-family: v.$font-family;
+    margin: auto;
+}
+
+.header-container{
+    width: 325px;
+    margin: auto;
+    
+    @media screen and (min-width:1440px) {
+        width: 543px;
+    }
+
+    .header{
+        &__theme-selection{
+            margin: 30px 0;
+            display: flex;
+            justify-content: space-between;
+
+            @media screen and (min-width:1440px) {
+                margin: 90px 0 30px 0;
+            }
+        
+           .theme-selection__title{
+               display: flex;
+               align-items: center;
+               h1{
+                   color: v.$text-3;
+                   font-size: v.$font-size-numbers;
+                }
+            }
+            .theme_selection__container{
+                height: 40px;
+                width: 140px;
+                display: flex;
+                justify-content: space-between;
+                .container__label{
+                    align-self: flex-end;
+                    padding-bottom: 10px;
+                    text-transform: uppercase;
+                    letter-spacing: .2rem;
+                    color: v.$text-3;
+                    font-size: .6rem;
+                }
+                .container__radio-wrapper{
+                    display: flex;
+                    flex-direction: column;
+                    .radio-wrapper__labels{
+                        padding: 0 10px;
+                        color: v.$text-3;
+                        display: flex;
+                        font-size: .7rem;
+                        justify-content: space-between;
+                    }
+                    .radio-wrapper__options{
+                        background-color: v.$toogle-and-key-bg-3;
+                        border: none;
+                        border-radius: 30px;
+                        display: flex;
+                        align-items: center;
+                        height: 26px;
+                        width: 70px;
+                        position: relative;
+                        
+                        input[type="radio"]{
+                            bottom: 2px;
+                            opacity: 0;
+                            position: relative;
+                        };
+
+                        .theme-selected{
+                            width: 20px;
+                            height: 20px;
+                            position: absolute;
+                            bottom: 3px;
+                            left: 3px;
+                            border-radius: 100%;
+                            -webkit-transition: all .4s ease;
+                            -moz-transition: all .4s ease;
+                            -o-transition: all .4s ease;
+                            -ms-transition: all .4s ease;
+                            transition: all .4s ease;
+                        }
+
+                        #theme-1:checked ~ .theme-selected{
+                            background-color: v.$key-equals-shadow-1;
+                            &:hover{
+                                background-color: v.$key-equals-1;
+                                cursor: pointer;
+                            }
+                        }
+
+                        #theme-2:checked ~ .theme-selected{
+                            background-color: v.$key-equals-shadow-2;
+                            left: 24px;
+                            &:hover{
+                                background-color: v.$key-equals-2;
+                                cursor: pointer;
+                            }
+                        }
+
+                        #theme-3:checked ~ .theme-selected{
+                            background-color: v.$key-equals-shadow-3;
+                            left: 47px;
+                            &:hover{
+                                background-color: v.$key-equals-3;
+                                cursor: pointer;
+                            }
+                        }
+                    }
+                }
+
+            }
+        }
+        &__view-result{
+            width: 100%;
+            height: 90px;
+            background-color: v.$scren-bg-3;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            margin-bottom: 24px;
+            .view_result__span{
+                color: v.$text-3;
+                font-size: v.$font-size-numbers;
+                padding: 0 40px;
+            }
+        }
+    }
+}
+
+.body-container{
+    background-color: v.$toogle-and-key-bg-3;
+    border-radius: 10px;
+    margin: auto;
+    width: 325px;
+    margin-bottom: 50px;
+
+    @media screen and (min-width:1440px) {
+        width: 543px;
+        margin-bottom: 80px;
+    }
+
+    .body{
+        width: 277px;
+        display: grid;
+        margin: auto;
+        padding: 25px 0;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+        grid-gap: 12px;
+
+        @media screen and (min-width:1440px) {
+            width: 480px;
+            padding: 30px 0;
+            grid-gap: 24px;
+        }
+
+        &-button{
+            color: v.$text-3;
+            height: 65px;
+            font-size: v.$font-size-numbers;
+            font-family: v.$font-family;
+            border: none;
+            border-radius: 10px;
+            width: 60px;
+            background-color:v.$key-dark-3;
+            box-shadow: inset 0 -5px 1px  v.$key-very-dark-3;
+            &:hover{
+                background-color: #fdfcfc;
+                cursor: pointer;
+            }   
+
+            @media screen and (min-width:1440px) {
+                width: 100px;
+            }
+        }
+
+        &-button--dark{
+            font-size: 22px;
+            background-color: v.$key-3;
+            color: v.$text-light-2;
+            box-shadow: inset 0 -5px 1px v.$key-shadow-3;
+            &:hover{
+                background-color: #808bac ;
+            }
+        }        
+        
+        &-button--red{
+            background-color: v.$key-equals-3;
+            color: v.$text-light-2;
+            box-shadow: inset 0 -5px 3px  v.$key-equals-shadow-3;
+            &:hover{
+                background-color: #d96659;
+            }
+        }
+
+        &-reset{
+           width: 100%;
+           grid-column: 1 / 3;
+        }
+
+        &-equals{
+            width: 100%;
+            grid-column-start: 3;
+            grid-column-end:  5;
+        }
+
+
+    }
+}
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+    color: white; 
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.attribution a { 
+    color: hsl(228, 51%, 63%); 
+}

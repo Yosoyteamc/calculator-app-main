@@ -1,0 +1,217 @@
+body {
+  background-color: hsl(0deg, 0%, 90%);
+}
+
+.calculator-container {
+  font-family: "League Spartan", sans-serif;
+  margin: auto;
+}
+
+.header-container {
+  width: 325px;
+  margin: auto;
+}
+@media screen and (min-width: 1440px) {
+  .header-container {
+    width: 543px;
+  }
+}
+.header-container .header__theme-selection {
+  margin: 30px 0;
+  display: flex;
+  justify-content: space-between;
+}
+@media screen and (min-width: 1440px) {
+  .header-container .header__theme-selection {
+    margin: 90px 0 30px 0;
+  }
+}
+.header-container .header__theme-selection .theme-selection__title {
+  display: flex;
+  align-items: center;
+}
+.header-container .header__theme-selection .theme-selection__title h1 {
+  color: hsl(60deg, 10%, 19%);
+  font-size: 32px;
+}
+.header-container .header__theme-selection .theme_selection__container {
+  height: 40px;
+  width: 140px;
+  display: flex;
+  justify-content: space-between;
+}
+.header-container .header__theme-selection .theme_selection__container .container__label {
+  align-self: flex-end;
+  padding-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  color: hsl(60deg, 10%, 19%);
+  font-size: 0.6rem;
+}
+.header-container .header__theme-selection .theme_selection__container .container__radio-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.header-container .header__theme-selection .theme_selection__container .container__radio-wrapper .radio-wrapper__labels {
+  padding: 0 10px;
+  color: hsl(60deg, 10%, 19%);
+  display: flex;
+  font-size: 0.7rem;
+  justify-content: space-between;
+}
+.header-container .header__theme-selection .theme_selection__container .container__radio-wrapper .radio-wrapper__options {
+  background-color: hsl(0deg, 5%, 81%);
+  border: none;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  height: 26px;
+  width: 70px;
+  position: relative;
+}
+.header-container .header__theme-selection .theme_selection__container .container__radio-wrapper .radio-wrapper__options input[type=radio] {
+  bottom: 2px;
+  opacity: 0;
+  position: relative;
+}
+.header-container .header__theme-selection .theme_selection__container .container__radio-wrapper .radio-wrapper__options .theme-selected {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  bottom: 3px;
+  left: 3px;
+  border-radius: 100%;
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  -ms-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+.header-container .header__theme-selection .theme_selection__container .container__radio-wrapper .radio-wrapper__options #theme-1:checked ~ .theme-selected {
+  background-color: hsl(6deg, 70%, 34%);
+}
+.header-container .header__theme-selection .theme_selection__container .container__radio-wrapper .radio-wrapper__options #theme-1:checked ~ .theme-selected:hover {
+  background-color: hsl(6deg, 63%, 50%);
+  cursor: pointer;
+}
+.header-container .header__theme-selection .theme_selection__container .container__radio-wrapper .radio-wrapper__options #theme-2:checked ~ .theme-selected {
+  background-color: hsl(25deg, 99%, 27%);
+  left: 24px;
+}
+.header-container .header__theme-selection .theme_selection__container .container__radio-wrapper .radio-wrapper__options #theme-2:checked ~ .theme-selected:hover {
+  background-color: hsl(25deg, 98%, 40%);
+  cursor: pointer;
+}
+.header-container .header__theme-selection .theme_selection__container .container__radio-wrapper .radio-wrapper__options #theme-3:checked ~ .theme-selected {
+  background-color: hsl(177deg, 92%, 70%);
+  left: 47px;
+}
+.header-container .header__theme-selection .theme_selection__container .container__radio-wrapper .radio-wrapper__options #theme-3:checked ~ .theme-selected:hover {
+  background-color: hsl(176deg, 100%, 44%);
+  cursor: pointer;
+}
+.header-container .header__view-result {
+  width: 100%;
+  height: 90px;
+  background-color: hsl(0deg, 0%, 93%);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-bottom: 24px;
+}
+.header-container .header__view-result .view_result__span {
+  color: hsl(60deg, 10%, 19%);
+  font-size: 32px;
+  padding: 0 40px;
+}
+
+.body-container {
+  background-color: hsl(0deg, 5%, 81%);
+  border-radius: 10px;
+  margin: auto;
+  width: 325px;
+  margin-bottom: 50px;
+}
+@media screen and (min-width: 1440px) {
+  .body-container {
+    width: 543px;
+    margin-bottom: 80px;
+  }
+}
+.body-container .body {
+  width: 277px;
+  display: grid;
+  margin: auto;
+  padding: 25px 0;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  grid-gap: 12px;
+}
+@media screen and (min-width: 1440px) {
+  .body-container .body {
+    width: 480px;
+    padding: 30px 0;
+    grid-gap: 24px;
+  }
+}
+.body-container .body-button {
+  color: hsl(60deg, 10%, 19%);
+  height: 65px;
+  font-size: 32px;
+  font-family: "League Spartan", sans-serif;
+  border: none;
+  border-radius: 10px;
+  width: 60px;
+  background-color: hsl(45deg, 7%, 89%);
+  box-shadow: inset 0 -5px 1px hsl(35deg, 11%, 61%);
+}
+.body-container .body-button:hover {
+  background-color: #fdfcfc;
+  cursor: pointer;
+}
+@media screen and (min-width: 1440px) {
+  .body-container .body-button {
+    width: 100px;
+  }
+}
+.body-container .body-button--dark {
+  font-size: 22px;
+  background-color: hsl(185deg, 42%, 37%);
+  color: hsl(0deg, 0%, 100%);
+  box-shadow: inset 0 -5px 1px hsl(185deg, 58%, 25%);
+}
+.body-container .body-button--dark:hover {
+  background-color: rgb(65, 153, 161);
+}
+.body-container .body-button--red {
+  background-color: hsl(25deg, 98%, 40%);
+  color: hsl(0deg, 0%, 100%);
+  box-shadow: inset 0 -5px 3px hsl(25deg, 99%, 27%);
+}
+.body-container .body-button--red:hover {
+  background-color: rgb(202, 100, 27);
+}
+.body-container .body-reset {
+  width: 100%;
+  grid-column: 1/3;
+}
+.body-container .body-equals {
+  width: 100%;
+  grid-column-start: 3;
+  grid-column-end: 5;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  color: rgb(37, 36, 36);
+  padding: 20px 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.attribution a {
+  color: hsl(228deg, 51%, 63%);
+}
+
+/*# sourceMappingURL=theme-second.css.map */

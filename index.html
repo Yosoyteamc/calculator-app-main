@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | Calculator app</title>
+  <link rel="stylesheet" href="assets/css/reset.css">
+  <link id="theme-selected" rel="stylesheet" href="assets/css/theme-first.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap" rel="stylesheet">
+  <script src="assets/javascript/main.js"></script>
+</head>
+<body>
+   <section class="calculator-container">
+    <div class="header-container">
+      <div class="header">
+        <div class="header__theme-selection">
+          <div class="theme-selection__title">
+            <h1>calc</h1>
+          </div>
+          <div class="theme_selection__container">
+            <p class="container__label">theme</p>
+            <div class="container__radio-wrapper">
+              <div class="radio-wrapper__labels">
+                <label for="theme-1">1</label>              
+                <label for="theme-2">2</label>              
+                <label for="theme-3">3</label>
+              </div>
+              <div class="radio-wrapper__options">
+                <input type="radio" name="theme" id="theme-1" title="button selection theme" checked>
+                <input type="radio" name="theme" id="theme-2" title="button selection theme">
+                <input type="radio" name="theme" id="theme-3" title="button selection theme">
+                <div class="theme-selected"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="header__view-result">
+          <span class="view_result__span">0</span>
+        </div>
+      </div>
+    </div>
+    <div class="body-container">
+      <div class="body">
+        <input type="button" value="7" class="body-button ">
+        <input type="button" value="8" class="body-button ">
+        <input type="button" value="9" class="body-button ">
+        <input type="button" value="DEL" class="body-button body-button--dark">
+        <input type="button" value="4" class="body-button ">
+        <input type="button" value="5" class="body-button ">
+        <input type="button" value="6" class="body-button ">
+        <input type="button" value="+" class="body-button ">
+        <input type="button" value="1" class="body-button ">
+        <input type="button" value="2" class="body-button ">
+        <input type="button" value="3" class="body-button ">
+        <input type="button" value="-" class="body-button ">
+        <input type="button" value="." class="body-button ">
+        <input type="button" value="0" class="body-button ">
+        <input type="button" value="/" class="body-button ">
+        <input type="button" value="x" class="body-button ">
+        <input type="button" value="RESET" class="body-button body-reset body-button--dark">
+        <input type="button" value="=" class="body-button body-equals body-button--red">
+      </div>
+    </div>
+   </section>
+<footer class="attribution">
+  Challenge by <a rel="noopener" href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.  
+  Coded by <a rel="noopener" href="https://www.linkedin.com/in/juanmosquera98/" target="_blank">Juan Mosquera</a>.  
+</footer>
+</body>
+</html>
