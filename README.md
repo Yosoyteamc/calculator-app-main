@@ -31,8 +31,8 @@ Los usuarios deben ser capaces de:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Github](https://github.com/Yosoyteamc/calculator-app-main)
+- Live Site URL: [Github Pages](https://yosoyteamc.github.io/calculator-app-main/)
 
 ## My process
 
