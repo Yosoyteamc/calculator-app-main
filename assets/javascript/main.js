@@ -109,18 +109,18 @@ function operarElement(value){
             case "-":
                 operator = value;
                 operanding = true;
-                console.log(operanding + " " + operator);
+                //console.log(operanding + " " + operator);
                 break;
             case "x":
                 operator="*"
                 operanding = true;
-                console.log(operanding + " " + operator);
+                // console.log(operanding + " " + operator);
                 break;
             case "=":
                 operanding = false;
-                console.log(numberx + operator + numbery);
+                //console.log(numberx + operator + numbery);
                 result = eval(numberx+operator+numbery);
-                if(result === Infinity){
+                if(result === Infinity || isNaN(result)){
                     document.querySelector(".view_result__span").textContent = "Error";
                     numberx = "0";
                     numbery = "0";
